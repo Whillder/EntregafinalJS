@@ -1,7 +1,7 @@
 // let nrofactura = document.querySelector("#nroFactura").value;
 // let fecha = document.querySelector("#fecha").value;
 
-let factura={};
+let factura=[];
 let productos=[];
 function agregarProducto(e){
     let hijo = e.target;
@@ -154,12 +154,11 @@ function unirFactura(e){
         alerta3();
     }
 }
-        function guardarFactura(e){
+        function guardarFactura(){
         let arrJson = JSON.stringify(factura);
         localStorage.setItem("factura" , arrJson);
         document.querySelector(".formFactura").reset();
         document.querySelector(".formProducto").reset();
-        
         document.querySelector("#tbody").innerHTML = "";
 // }    
 }
